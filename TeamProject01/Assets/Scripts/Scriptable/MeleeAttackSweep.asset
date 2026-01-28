@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b044f359a139eff4f96d9467a28fd976, type: 3}
+  m_Name: MeleeAttackSweep
+  m_EditorClassIdentifier: 
+  ID: MeleeAttackSweep
+  Type: 0
+  Damage: 10
+  StunSec: 0
+  CoolDown: 0.5
+  KnockBackPower: 0.5
+  Shape: 1
+  RangeForward: 0.5
+  Angle: 120
+  Radius: 1
+  boxHalfExtents: {x: 0, y: 0, z: 0}
+  ProjectileSpeed: 0
+  projectileLifeTime: 0
