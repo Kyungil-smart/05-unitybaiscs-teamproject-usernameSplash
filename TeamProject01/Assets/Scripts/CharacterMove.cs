@@ -60,7 +60,8 @@ public class CharacterMove : MonoBehaviour
     private void RotateTowards(Vector3 dir)
     {
         Quaternion target = Quaternion.LookRotation(dir, Vector3.up);
-        transform.rotation = target;//Quaternion.RotateTowards(transform.rotation, target, mRotateSpeed * Time.deltaTime);
+        mRb.rotation = target;
+        //transform.rotation = target;//Quaternion.RotateTowards(transform.rotation, target, mRotateSpeed * Time.deltaTime);
     }
 
     private void FixedUpdate()
