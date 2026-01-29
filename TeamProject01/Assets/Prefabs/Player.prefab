@@ -104,6 +104,7 @@ MonoBehaviour:
   moveController: {fileID: 0}
   animator: {fileID: 8384697218907186009}
   IsInvulnerable: 0
+  mHP: 0
 --- !u!114 &5769696753980785901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,7 +137,7 @@ MonoBehaviour:
   AttackOrigin: {fileID: 0}
   TargetMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!114 &4855463173255879122
 MonoBehaviour:
   m_ObjectHideFlags: 0
