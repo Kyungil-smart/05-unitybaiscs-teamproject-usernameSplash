@@ -34,7 +34,7 @@ public class CharacterMove : MonoBehaviour
 
     public void SetMoveInput(Vector2 input)
     {
-        // input: x=ÁÂ¿ì(X), y=»óÇÏ(Z)
+        // input: x=ï¿½Â¿ï¿½(X), y=ï¿½ï¿½ï¿½ï¿½(Z)
         Vector3 dir = new Vector3(input.x, 0f, input.y);
         dir = Vector3.ClampMagnitude(dir, 1f);
 
@@ -65,14 +65,21 @@ public class CharacterMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // ³Ë¹é °¨¼è
+        // ï¿½Ë¹ï¿½ ï¿½ï¿½ï¿½ï¿½
         mKnockbackVel = Vector3.Lerp(mKnockbackVel, Vector3.zero, mKnockbackDecay * Time.fixedDeltaTime);
 
         Vector3 vel = mDesiredVelocity + mKnockbackVel;
 
         if (mRb != null)
         {
-            mRb.velocity = new Vector3(vel.x, mRb.velocity.y, vel.z);
+            if (mRb.isKinematic)    // kinematicì¸ ê²½ìš° ë„‰ë°± í¬ì§€ì…˜ì„ ì§ì ‘ ì§€ì •í•´ì•¼ í•¨. 
+            {
+                mRb.MovePosition(mRb.position + new Vector3(vel.x, 0f, vel.z) * Time.fixedDeltaTime);
+            }
+            else
+            {
+                mRb.velocity = new Vector3(vel.x, mRb.velocity.y, vel.z);
+            }
         }
         else
         {
