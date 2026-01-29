@@ -56,6 +56,8 @@ public class PlayerCombat : MonoBehaviour
             ExecuteRanged(origin, forward, data);
         }
 
+        mNextTimeById[attackId] = Time.time + data.CoolDown;
+
         return true;
     }
 
@@ -87,8 +89,8 @@ public class PlayerCombat : MonoBehaviour
                 continue;
             }
 
-            IDamageable dmg = collider.GetComponentInParent<IDamageable>();
-            if (dmg != null || !dmg.IsAlive)
+            IDamageable dmg = collider.GetComponent<IDamageable>();
+            if (dmg == null || !dmg.IsAlive)
             {
                 continue;
             }
@@ -107,7 +109,7 @@ public class PlayerCombat : MonoBehaviour
                 continue;
             }
 
-            if (data.Shape == EHitScanShape.Sphere || Vector3.Angle(forward, destinationDir.normalized) > data.Angle * 0.5f)
+            if (data.Angle > 0 && Vector3.Angle(forward, destinationDir.normalized) > data.Angle * 0.5f)
             {
                 continue;
             }

@@ -7,7 +7,7 @@ public class CharacterHealth : MonoBehaviour, IDamageable
     [SerializeField] private Animator animator;
     [SerializeField] private bool IsInvulnerable = false;
 
-    private float mHP;
+    [SerializeField] private float mHP;
     private float mStunTime;
 
     public bool IsAlive => mHP > 0f;

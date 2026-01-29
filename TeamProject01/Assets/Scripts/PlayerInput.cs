@@ -38,21 +38,27 @@ public class PlayerInput : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.J))
         {
-            combatController.TryAttack("MeleeAttackThrust");
-            animator.SetTrigger("Attack");
-            animator.SetInteger("AttackID", 0);
+            if (combatController.TryAttack("MeleeAttackThrust"))
+            {
+                animator.SetTrigger("Attack");
+                animator.SetInteger("AttackID", 0);
+            }
         }
         else if (Input.GetKeyDown(KeyCode.K))
         {
-            combatController.TryAttack("MeleeAttackSweep");
-            animator.SetTrigger("Attack");
-            animator.SetInteger("AttackID", 1);
+            if (combatController.TryAttack("MeleeAttackSweep"))
+            {
+                animator.SetTrigger("Attack");
+                animator.SetInteger("AttackID", 1);
+            }
         }
         else if (Input.GetKeyDown(KeyCode.L))
         {
-            combatController.TryAttack("MeleeAttackSpin");
-            animator.SetTrigger("Attack");
-            animator.SetInteger("AttackID", 2);
+            if (combatController.TryAttack("MeleeAttackSpin"))
+            {
+                animator.SetTrigger("Attack");
+                animator.SetInteger("AttackID", 2);
+            }
         }
     }
 
