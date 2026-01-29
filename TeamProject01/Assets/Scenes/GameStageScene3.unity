@@ -217,10 +217,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 530471200608004117, guid: 19faac0c6ab72a646a48015be64ac0f7,
+        type: 3}
+      propertyPath: TargetMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 607046965676335178, guid: 19faac0c6ab72a646a48015be64ac0f7,
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 607046965676335178, guid: 19faac0c6ab72a646a48015be64ac0f7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4807991808237493634, guid: 19faac0c6ab72a646a48015be64ac0f7,
         type: 3}
@@ -349,6 +359,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517848974479329399, guid: 39f060cab2e03494c9d06b8dc179d480,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6457748565494883284, guid: 39f060cab2e03494c9d06b8dc179d480,
         type: 3}
@@ -499,6 +514,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ocean
       objectReference: {fileID: 0}
+    - target: {fileID: 8044577577686257489, guid: 792563562efebe34c9988a3998a08a70,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -567,6 +587,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Global Volume
       objectReference: {fileID: 0}
+    - target: {fileID: 2378374113070213138, guid: 676c87d118008b4458928d621ffd1511,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -634,6 +659,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Directional Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 7199400397171053255, guid: beab2d549a548d24cab39b67d7e368eb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
