@@ -12,6 +12,7 @@ public class MonsterMove : MonoBehaviour
     private void Awake()
     {
         nav = GetComponent<NavMeshAgent>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         healthController = GetComponent<CharacterHealth>();
     }
 
