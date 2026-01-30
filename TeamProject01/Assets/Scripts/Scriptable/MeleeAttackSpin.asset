@@ -21,7 +21,7 @@ MonoBehaviour:
   Shape: 1
   RangeForward: 0
   Angle: 360
-  Radius: 3
+  Radius: 2
   boxHalfExtents: {x: 0, y: 0, z: 0}
   ProjectileSpeed: 0
   projectileLifeTime: 0
