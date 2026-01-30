@@ -34,7 +34,7 @@ public class CharacterMove : MonoBehaviour
 
     public void SetMoveInput(Vector2 input)
     {
-        // input: x=�¿�(X), y=����(Z)
+        // input: x=좌우(X), y=상하(Z)
         Vector3 dir = new Vector3(input.x, 0f, input.y);
         dir = Vector3.ClampMagnitude(dir, 1f);
 
@@ -66,13 +66,15 @@ public class CharacterMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // �˹� ����
+        // 넉백 감쇠
         mKnockbackVel = Vector3.Lerp(mKnockbackVel, Vector3.zero, mKnockbackDecay * Time.fixedDeltaTime);
 
         Vector3 vel = mDesiredVelocity + mKnockbackVel;
 
         if (mRb != null)
         {
+            mRb.angularVelocity = Vector3.zero;
+
             if (mRb.isKinematic)    // kinematic인 경우 넉백 포지션을 직접 지정해야 함. 
             {
                 mRb.MovePosition(mRb.position + new Vector3(vel.x, 0f, vel.z) * Time.fixedDeltaTime);
