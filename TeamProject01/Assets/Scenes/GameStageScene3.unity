@@ -763,7 +763,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1403629696950387605, guid: 675690e81adc90c448d55aa134031fc6,
         type: 3}
+      propertyPath: monsterPrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1403629696950387605, guid: 675690e81adc90c448d55aa134031fc6,
+        type: 3}
+      propertyPath: spawnPositions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1403629696950387605, guid: 675690e81adc90c448d55aa134031fc6,
+        type: 3}
       propertyPath: monsterPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 6835166201895678589, guid: 1669b23e561ecbf468a4fcdb15815946,
+        type: 3}
+    - target: {fileID: 1403629696950387605, guid: 675690e81adc90c448d55aa134031fc6,
+        type: 3}
+      propertyPath: monsterPrefabs.Array.data[1]
       value: 
       objectReference: {fileID: 6835166201895678589, guid: 1669b23e561ecbf468a4fcdb15815946,
         type: 3}
@@ -772,6 +788,11 @@ PrefabInstance:
       propertyPath: spawnPositions.Array.data[0]
       value: 
       objectReference: {fileID: 1597659613}
+    - target: {fileID: 1403629696950387605, guid: 675690e81adc90c448d55aa134031fc6,
+        type: 3}
+      propertyPath: spawnPositions.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4154047489789462790, guid: 675690e81adc90c448d55aa134031fc6,
         type: 3}
       propertyPath: m_LocalPosition.x
