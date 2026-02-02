@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public class CharacterHealth : MonoBehaviour, IDamageable
 {
@@ -7,11 +8,14 @@ public class CharacterHealth : MonoBehaviour, IDamageable
     [SerializeField] private Animator animator;
     [SerializeField] private bool IsInvulnerable = false;
 
-    [SerializeField] private float mHP;
+    [SerializeField] private float HP;
     private float mStunTime;
 
-    public bool IsAlive => mHP > 0f;
+    public bool IsAlive => HP > 0f;
     public bool IsStunned => Time.time < mStunTime;
+
+    public event Action OnDied;
+    private bool mDeadCalled;
 
     private void Reset()
     {
@@ -23,7 +27,7 @@ public class CharacterHealth : MonoBehaviour, IDamageable
 
     private void Awake()
     {
-        mHP = MaxHP;
+        HP = MaxHP;
 
         if (moveController == null)
         {
@@ -43,7 +47,7 @@ public class CharacterHealth : MonoBehaviour, IDamageable
             return;
         }
 
-        mHP -= hit.Damage;
+        HP -= hit.Damage;
         mStunTime = Mathf.Max(mStunTime, Time.time + hit.StunSec);
 
         if (moveController != null)
@@ -51,17 +55,23 @@ public class CharacterHealth : MonoBehaviour, IDamageable
             moveController.StopMove();
             moveController.AddKnockback(hit.Knockback);
         }
-        
-        if (mHP <= 0f)
+
+        if (HP <= 0f)
         {
-            mHP = 0f;
-            if (animator != null)
+            HP = 0f;
+            if (!mDeadCalled)
             {
-                animator.SetTrigger("Dead");
+                mDeadCalled = true;
+
+                if (animator != null)
+                {
+                    animator.SetTrigger("Dead");
+                }
+                OnDied?.Invoke();
             }
         }
-        
-        else if (animator != null)
+
+        if (animator != null)
         {
             animator.SetTrigger("Hit");
         }

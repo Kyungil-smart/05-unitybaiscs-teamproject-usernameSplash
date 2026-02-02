@@ -8,7 +8,14 @@ public class MonsterSpawner : MonoBehaviour
     [SerializeField] private Transform[] spawnPositions;
     [SerializeField] private float mSpawnDelay = 2f;
 
+    [SerializeField] private BattleManager battleManager;
+
     private bool mIsTriggered = false;
+
+    private void Reset()
+    {
+        battleManager = FindObjectOfType<BattleManager>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -25,7 +32,13 @@ public class MonsterSpawner : MonoBehaviour
         for (int i = 0; i < monsterPrefabs.Length; i++)
         {
             Transform pos = spawnPositions[i % spawnPositions.Length];
-            Instantiate(monsterPrefabs[i], pos.position, pos.rotation);
+            GameObject m = Instantiate(monsterPrefabs[i], pos.position, pos.rotation);
+
+            CharacterHealth monster = m.GetComponent<CharacterHealth>();
+            if (battleManager != null && monster != null)
+            {
+                battleManager.RegisterMonster(monster);
+            }
         }
         Destroy(gameObject);
     }
