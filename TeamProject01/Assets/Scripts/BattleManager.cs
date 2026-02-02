@@ -10,7 +10,6 @@ public class BattleManager : MonoBehaviour
     private int mAliveMonsters;
     public bool Finished { get; private set; }
     public bool IsWin { get; private set; }
-    public bool Spawn { get; private set; }
 
     private void Awake()
     {
@@ -28,7 +27,6 @@ public class BattleManager : MonoBehaviour
     {
         Finished = false;
         IsWin = false;
-        Spawn = false;
         mAliveMonsters = 0;
 
         if (player != null)
