@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ceb5f1b2-f49a-4b50-a2ee-c8e22b0d51ee" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TeamProject01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TeamProject01/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mini Legion Rock Golem PBR HP Polyart/Animations/Attack01.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mini Legion Rock Golem PBR HP Polyart/Animations/Attack01.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Golem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Golem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonsterAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonsterAttack.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
