@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 7135699756480483021}
   - component: {fileID: 144496437287628826}
   - component: {fileID: 2689581729276028044}
+  - component: {fileID: 4991683272997156652}
+  - component: {fileID: 556115100799620444}
   m_Layer: 7
   m_Name: PartyMonster
   m_TagString: Untagged
@@ -141,6 +143,48 @@ MonoBehaviour:
   nav: {fileID: 144496437287628826}
   player: {fileID: 0}
   healthController: {fileID: 7135699756480483021}
+  animator: {fileID: 0}
+--- !u!114 &4991683272997156652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6835166201895678589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c02c51c444a92b45b27b58dcbf77934, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  database: {fileID: 11400000, guid: b84c8ef57ff59b14983775a3c5b89a66, type: 2}
+  AttackOrigin: {fileID: 0}
+  TargetMask:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!114 &556115100799620444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6835166201895678589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75cfa8af59cdb2c4cbd1e2117356fa83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nav: {fileID: 144496437287628826}
+  combatController: {fileID: 4991683272997156652}
+  healthController: {fileID: 7135699756480483021}
+  animator: {fileID: 0}
+  player: {fileID: 0}
+  AttackDistance: 1.5
+  Attack1Id: MeleeAttackPunch
+  Attack2Id: MeleeAttackKick
+  Attack3Id: MeleeAttackSlide
+  Attack1Percent: 50
+  Attack2Percent: 30
+  Attack3Percent: 20
 --- !u!1001 &8966324898099860752
 PrefabInstance:
   m_ObjectHideFlags: 0
