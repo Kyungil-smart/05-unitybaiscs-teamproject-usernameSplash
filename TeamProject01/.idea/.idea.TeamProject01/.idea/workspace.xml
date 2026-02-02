@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ceb5f1b2-f49a-4b50-a2ee-c8e22b0d51ee" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TeamProject01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TeamProject01/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mini Legion Rock Golem PBR HP Polyart/Animations/FreeGolem.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mini Legion Rock Golem PBR HP Polyart/Animations/FreeGolem.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mini Legion Rock Golem PBR HP Polyart/Materials/HP_Golem.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mini Legion Rock Golem PBR HP Polyart/Materials/HP_Golem.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mini Legion Rock Golem PBR HP Polyart/Materials/PBR_Golem.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mini Legion Rock Golem PBR HP Polyart/Materials/PBR_Golem.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mini Legion Rock Golem PBR HP Polyart/Materials/PolyartStandard.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mini Legion Rock Golem PBR HP Polyart/Materials/PolyartStandard.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mini Legion Rock Golem PBR HP Polyart/Materials/Stage 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mini Legion Rock Golem PBR HP Polyart/Materials/Stage 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Golem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Golem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameStageScene2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameStageScene2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "origin/stage__2",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+</project>

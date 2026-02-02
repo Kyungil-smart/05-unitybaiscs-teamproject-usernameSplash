@@ -51,12 +51,7 @@ public class CharacterHealth : MonoBehaviour, IDamageable
             moveController.StopMove();
             moveController.AddKnockback(hit.Knockback);
         }
-
-        if (animator != null)
-        {
-            animator.SetTrigger("Hit");
-        }
-
+        
         if (mHP <= 0f)
         {
             mHP = 0f;
@@ -64,6 +59,11 @@ public class CharacterHealth : MonoBehaviour, IDamageable
             {
                 animator.SetTrigger("Dead");
             }
+        }
+        
+        else if (animator != null)
+        {
+            animator.SetTrigger("Hit");
         }
     }
 }
