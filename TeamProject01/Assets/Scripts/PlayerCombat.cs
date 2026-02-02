@@ -72,7 +72,7 @@ public class PlayerCombat : MonoBehaviour
             _ => System.Array.Empty<Collider>()
         };
 
-        Debug.Log($"[PlayerCombat] Execute Melee Attack, Target : {colliders.Length}");
+        Debug.Log($"[PlayerCombat] {gameObject.name} Execute Melee Attack, ID : {data.ID} Target : {colliders.Length}");
 
         mHitRoots.Clear();
 
