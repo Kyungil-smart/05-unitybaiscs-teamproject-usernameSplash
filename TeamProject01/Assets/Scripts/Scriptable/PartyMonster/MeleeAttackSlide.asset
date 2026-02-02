@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: MeleeAttackSlide
   Type: 0
   Damage: 30
-  StunSec: 2
+  StunSec: 0
   CoolDown: 15
   KnockBackPower: 5
   Shape: 0

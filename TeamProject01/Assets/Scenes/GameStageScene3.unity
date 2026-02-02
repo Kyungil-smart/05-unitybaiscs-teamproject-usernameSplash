@@ -347,16 +347,6 @@ PrefabInstance:
       propertyPath: moveController
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 8384697218907186009, guid: 19faac0c6ab72a646a48015be64ac0f7,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 1ac31abf48ae80846bd3b8b7728199fb, type: 2}
-    - target: {fileID: 8384697218907186009, guid: 19faac0c6ab72a646a48015be64ac0f7,
-        type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

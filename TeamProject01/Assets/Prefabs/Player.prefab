@@ -104,7 +104,7 @@ MonoBehaviour:
   moveController: {fileID: 0}
   animator: {fileID: 8384697218907186009}
   IsInvulnerable: 0
-  mHP: 0
+  HP: 0
 --- !u!114 &5769696753980785901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,6 +215,16 @@ PrefabInstance:
     - target: {fileID: 8855052669661678444, guid: 2dfbb63c9cdf7504faf4ff26b0581598,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9036980633323257398, guid: 2dfbb63c9cdf7504faf4ff26b0581598,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1ac31abf48ae80846bd3b8b7728199fb, type: 2}
+    - target: {fileID: 9036980633323257398, guid: 2dfbb63c9cdf7504faf4ff26b0581598,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
