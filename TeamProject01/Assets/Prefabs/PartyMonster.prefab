@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 556115100799620444}
   m_Layer: 7
   m_Name: PartyMonster
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,7 +105,7 @@ MonoBehaviour:
   moveController: {fileID: 0}
   animator: {fileID: 4358696192559269890}
   IsInvulnerable: 0
-  mHP: 0
+  HP: 0
 --- !u!195 &144496437287628826
 NavMeshAgent:
   m_ObjectHideFlags: 0
