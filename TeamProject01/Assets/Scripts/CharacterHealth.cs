@@ -50,6 +50,8 @@ public class CharacterHealth : MonoBehaviour, IDamageable
         HP -= hit.Damage;
         mStunTime = Mathf.Max(mStunTime, Time.time + hit.StunSec);
 
+        Debug.Log($"{gameObject.name} take hit by {hit.Attacker.name}, Time : {Time.realtimeSinceStartup}");
+
         if (moveController != null)
         {
             moveController.StopMove();
@@ -71,7 +73,7 @@ public class CharacterHealth : MonoBehaviour, IDamageable
             }
         }
 
-        if (animator != null)
+        else if (animator != null)
         {
             animator.SetTrigger("Hit");
         }
