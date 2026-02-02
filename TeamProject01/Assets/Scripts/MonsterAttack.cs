@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -43,7 +41,7 @@ public class MonsterAttack : MonoBehaviour
             mbIsAttacking = false;
             return;
         }
-        
+
         if (!healthController.IsAlive || healthController.IsStunned)
         {
             nav.isStopped = true;
@@ -72,18 +70,6 @@ public class MonsterAttack : MonoBehaviour
         string selectedAttack = SelectAttackId();
 
         if (TryExecuteAttack(selectedAttack))
-        {
-            return;
-        }
-        if (selectedAttack != Attack1Id && TryExecuteAttack(Attack1Id))
-        {
-            return;
-        }
-        if (selectedAttack != Attack2Id && TryExecuteAttack(Attack2Id))
-        {
-            return;
-        }
-        if (selectedAttack != Attack3Id && TryExecuteAttack(Attack3Id))
         {
             return;
         }
