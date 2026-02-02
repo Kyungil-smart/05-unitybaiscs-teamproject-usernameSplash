@@ -7,8 +7,6 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private CharacterHealth healthController;
     [SerializeField] private Animator animator;
 
-    private bool mbIsAttacking = false;
-
     private void Reset()
     {
         moveController = GetComponent<CharacterMove>();
@@ -25,7 +23,7 @@ public class PlayerInput : MonoBehaviour
             return;
         }
 
-        if (mbIsAttacking)
+        if (animator.GetBool("CanMove") == false)
         {
             moveController.StopMove();
             return;
@@ -64,11 +62,14 @@ public class PlayerInput : MonoBehaviour
 
     public void AnimOnAttackStart()
     {
-        mbIsAttacking = true;
+        Debug.Log($"AttackAnimStart, Time : {Time.realtimeSinceStartup}");
+        //mbIsAttacking = true;
     }
 
     public void AnimOnAttackEnd()
     {
-        mbIsAttacking = false;
+        Debug.Log($"AttackAnimEnd, Time : {Time.realtimeSinceStartup}");
+        //mbIsAttacking = false;
     }
+
 }

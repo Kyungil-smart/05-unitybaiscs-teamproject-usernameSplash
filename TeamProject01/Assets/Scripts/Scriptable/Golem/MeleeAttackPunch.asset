@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b044f359a139eff4f96d9467a28fd976, type: 3}
-  m_Name: MeleeAttackThrust
+  m_Name: MeleeAttackPunch
   m_EditorClassIdentifier: 
-  ID: MeleeAttackThrust
+  ID: MeleeAttackPunch
   Type: 0
-  Damage: 20
+  Damage: 10
   StunSec: 0
-  CoolDown: 0.5
-  KnockBackPower: 10
+  CoolDown: 1.5
+  KnockBackPower: 2
   Shape: 0
   RangeForward: 0.7
   Angle: 20

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,8 +8,9 @@ public class MonsterAttack : MonoBehaviour
     [SerializeField] private CharacterHealth healthController;
     [SerializeField] private Animator animator;
     [SerializeField] private Transform player;
+    private CharacterHealth playerHealth;
 
-    [SerializeField] private float AttackDistance = 1.5f; // °ø°Ý½Ãµµ °Å¸®
+    [SerializeField] private float AttackDistance = 1.5f; // ï¿½ï¿½ï¿½Ý½Ãµï¿½ ï¿½Å¸ï¿½
 
     [Header("Attack ID")]
     [SerializeField] private string Attack1Id;
@@ -32,10 +31,17 @@ public class MonsterAttack : MonoBehaviour
         healthController = GetComponent<CharacterHealth>();
         animator = GetComponentInChildren<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        playerHealth = player.GetComponentInParent<CharacterHealth>();
     }
 
     private void Update()
     {
+        if (playerHealth != null && !playerHealth.IsAlive)
+        {
+            mbIsAttacking = false;
+            return;
+        }
+
         if (!healthController.IsAlive || healthController.IsStunned)
         {
             nav.isStopped = true;
@@ -64,18 +70,6 @@ public class MonsterAttack : MonoBehaviour
         string selectedAttack = SelectAttackId();
 
         if (TryExecuteAttack(selectedAttack))
-        {
-            return;
-        }
-        if (selectedAttack != Attack1Id && TryExecuteAttack(Attack1Id))
-        {
-            return;
-        }
-        if (selectedAttack != Attack2Id && TryExecuteAttack(Attack2Id))
-        {
-            return;
-        }
-        if (selectedAttack != Attack3Id && TryExecuteAttack(Attack3Id))
         {
             return;
         }

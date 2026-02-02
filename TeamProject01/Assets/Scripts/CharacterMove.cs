@@ -73,14 +73,13 @@ public class CharacterMove : MonoBehaviour
 
         if (mRb != null)
         {
-            mRb.angularVelocity = Vector3.zero;
-
             if (mRb.isKinematic)    // kinematic인 경우 넉백 포지션을 직접 지정해야 함. 
             {
                 mRb.MovePosition(mRb.position + new Vector3(vel.x, 0f, vel.z) * Time.fixedDeltaTime);
             }
             else
             {
+                mRb.angularVelocity = Vector3.zero;
                 mRb.velocity = new Vector3(vel.x, mRb.velocity.y, vel.z);
             }
         }
