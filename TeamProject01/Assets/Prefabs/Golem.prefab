@@ -814,6 +814,8 @@ GameObject:
   - component: {fileID: 5352509515349375547}
   - component: {fileID: 8967225197258255750}
   - component: {fileID: 140177955805810710}
+  - component: {fileID: 4067264941223643680}
+  - component: {fileID: 1132053363545892653}
   m_Layer: 7
   m_Name: Golem
   m_TagString: Untagged
@@ -919,6 +921,7 @@ MonoBehaviour:
   nav: {fileID: 8967225197258255750}
   player: {fileID: 0}
   healthController: {fileID: 8550199443594807651}
+  animator: {fileID: 0}
 --- !u!195 &8967225197258255750
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -957,3 +960,44 @@ MonoBehaviour:
   mRotateSpeed: 720
   mFaceMoveDirection: 1
   mRb: {fileID: 4713808789987850139}
+--- !u!114 &4067264941223643680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8183003184875160568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c02c51c444a92b45b27b58dcbf77934, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  database: {fileID: 11400000, guid: 3684e2254d5b0ba4a9c4c29549575d8b, type: 2}
+  AttackOrigin: {fileID: 0}
+  TargetMask:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!114 &1132053363545892653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8183003184875160568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75cfa8af59cdb2c4cbd1e2117356fa83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nav: {fileID: 8967225197258255750}
+  combatController: {fileID: 4067264941223643680}
+  healthController: {fileID: 8550199443594807651}
+  animator: {fileID: 0}
+  player: {fileID: 0}
+  AttackDistance: 1.5
+  Attack1Id: MeleeAttackPunch
+  Attack2Id: 
+  Attack3Id: 
+  Attack1Percent: 100
+  Attack2Percent: 0
+  Attack3Percent: 0
