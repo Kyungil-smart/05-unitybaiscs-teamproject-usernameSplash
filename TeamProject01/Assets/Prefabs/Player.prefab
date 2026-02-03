@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bd8c49678b0ce74c8f25a373be66401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHP: 200
+  MaxHP: 300
   moveController: {fileID: 0}
   animator: {fileID: 8384697218907186009}
   IsInvulnerable: 0

@@ -24,6 +24,9 @@ public class MonsterAttack : MonoBehaviour
 
     private bool mbIsAttacking = false;
 
+    private const float mAttackCooltime = 1.5f;
+    private float mLastAttackTime = 0.0f;
+
     private void Awake()
     {
         nav = GetComponent<NavMeshAgent>();
@@ -58,25 +61,33 @@ public class MonsterAttack : MonoBehaviour
         {
             return;
         }
+
         float dist = Vector3.Distance(transform.position, player.position);
 
-        if (dist > AttackDistance)
+        if (dist <= AttackDistance)
         {
-            return;
+            if (Time.time - mLastAttackTime < mAttackCooltime)
+            {
+                return;
+            }
+
+            mLastAttackTime = Time.time;
+
+            nav.isStopped = true;
+            string selectedAttack = SelectAttackId();
+
+            nav.updateRotation = false;
+            Vector3 dirToPlayer = player.position - transform.position;
+            transform.rotation = Quaternion.LookRotation(dirToPlayer);
+            nav.updateRotation = true;
+
+            if (TryExecuteAttack(selectedAttack))
+            {
+                return;
+            }
         }
 
-        nav.isStopped = true;
-        string selectedAttack = SelectAttackId();
-
-        nav.updateRotation = false;
-        Vector3 dirToPlayer = player.position - transform.position;
-        transform.rotation = Quaternion.LookRotation(dirToPlayer);
-        nav.updateRotation = true;
-
-        if (TryExecuteAttack(selectedAttack))
-        {
-            return;
-        }
+        return;
     }
 
     private string SelectAttackId()

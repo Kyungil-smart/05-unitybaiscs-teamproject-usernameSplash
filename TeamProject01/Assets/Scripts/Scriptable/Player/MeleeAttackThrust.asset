@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: MeleeAttackThrust
   Type: 0
-  Damage: 20
-  StunSec: 0
-  CoolDown: 0.5
+  Damage: 25
+  StunSec: 0.1
+  CoolDown: 0.2
   KnockBackPower: 10
   Shape: 0
   RangeForward: 0.7
   Angle: 20
   Radius: 0
-  boxHalfExtents: {x: 0.2, y: 0, z: 1.4}
+  boxHalfExtents: {x: 0.4, y: 0, z: 1.4}
   ProjectileSpeed: 0
   projectileLifeTime: 0
