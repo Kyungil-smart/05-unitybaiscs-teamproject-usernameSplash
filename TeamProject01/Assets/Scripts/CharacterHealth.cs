@@ -1,5 +1,5 @@
-using UnityEngine;
 using System;
+using UnityEngine;
 
 public class CharacterHealth : MonoBehaviour, IDamageable
 {
@@ -67,7 +67,8 @@ public class CharacterHealth : MonoBehaviour, IDamageable
 
                 if (animator != null)
                 {
-                    animator.SetTrigger("Dead");
+                    Debug.Log($"{gameObject.name} is Dead");
+                    animator.SetBool("IsDead", true);
                 }
                 OnDied?.Invoke();
             }
