@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: MeleeAttackSweep
   Type: 0
-  Damage: 10
-  StunSec: 0
-  CoolDown: 0.5
+  Damage: 20
+  StunSec: 0.1
+  CoolDown: 0.2
   KnockBackPower: 20
   Shape: 1
   RangeForward: 0.5

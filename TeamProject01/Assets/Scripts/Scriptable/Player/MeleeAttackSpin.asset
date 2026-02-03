@@ -16,7 +16,7 @@ MonoBehaviour:
   Type: 0
   Damage: 30
   StunSec: 2
-  CoolDown: 10
+  CoolDown: 5
   KnockBackPower: 30
   Shape: 1
   RangeForward: 0
