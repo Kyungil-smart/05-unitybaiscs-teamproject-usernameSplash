@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MainUIController : MonoBehaviour
 {
-    [SerializeField] private string SceneName = "LevelSelectScene";
+    [SerializeField] private string MainSceneName = "LevelSelectScene";
 
     public void OnClickStart()
     {
-        SceneManager.LoadScene(SceneName);
+        SceneManager.LoadScene(MainSceneName);
     }
 
     public void OnClickQuit()
