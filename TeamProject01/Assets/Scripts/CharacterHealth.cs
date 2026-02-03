@@ -68,7 +68,7 @@ public class CharacterHealth : MonoBehaviour, IDamageable
                 if (animator != null)
                 {
                     Debug.Log($"{gameObject.name} is Dead");
-                    animator.SetTrigger("Dead");
+                    animator.SetBool("IsDead", true);
                 }
                 OnDied?.Invoke();
             }
