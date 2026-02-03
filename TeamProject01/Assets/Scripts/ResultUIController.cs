@@ -11,7 +11,9 @@ public class ResultUIController : MonoBehaviour
 
     [SerializeField] private string TitleSceneName = "TitleScene";
     [SerializeField] private string StageSelectSceneName = "LevelSelectScene";
-
+    
+    private Coroutine showCoroutine;
+    
     private void Awake()
     {
         if (resultPanel != null)
@@ -20,6 +22,17 @@ public class ResultUIController : MonoBehaviour
         }
     }
 
+    public void ShowAfterDelay(bool isWin)
+    {
+        StartCoroutine(CoShowAfterDelay(isWin));
+    }
+
+    private IEnumerator CoShowAfterDelay(bool isWin)
+    {
+        yield return new WaitForSecondsRealtime(2f);
+        Show(isWin);
+    }
+    
     public void Show(bool isWin)
     {
         resultPanel.SetActive(true);

@@ -80,10 +80,10 @@ public class BattleManager : MonoBehaviour
         }
 
         Finished = true;
-        Debug.Log("ÆÐ¹è");
+        Debug.Log("ï¿½Ð¹ï¿½");
         if (resultUI != null)
         {
-            resultUI.Show(false);
+            resultUI.ShowAfterDelay(false);
         }
     }
 
@@ -98,10 +98,10 @@ public class BattleManager : MonoBehaviour
         if (mAliveMonsters <= 0)
         {
             Finished = true;
-            Debug.Log("½Â¸®");
+            Debug.Log("ï¿½Â¸ï¿½");
             if (resultUI != null)
             {
-                resultUI.Show(true);
+                resultUI.ShowAfterDelay(true);
             }
         }
     }
