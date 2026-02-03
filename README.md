@@ -1,6 +1,6 @@
 # 플밍 4기 팀 프로젝트
 
-## 🎮 Monster Arena (게임명)
+## 🎮 Monster Arena
 
 ![GameScreenShot](./images/1.png)
 
