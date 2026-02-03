@@ -7,12 +7,28 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private CharacterHealth healthController;
     [SerializeField] private Animator animator;
 
+    private int mMoveLock = 0;
+    private bool mCanMove => mMoveLock == 0;
+
+    public void AddMoveLock() => mMoveLock++;
+    public void RemoveMoveLock() => mMoveLock--;
+
     private void Reset()
     {
         moveController = GetComponent<CharacterMove>();
         combatController = GetComponent<PlayerCombat>();
         healthController = GetComponent<CharacterHealth>();
         animator = GetComponentInChildren<Animator>();
+    }
+
+    private void Awake()
+    {
+        mMoveLock = 0;
+    }
+
+    private void OnDisable()
+    {
+        mMoveLock = 0;
     }
 
     private void Update()
@@ -23,7 +39,7 @@ public class PlayerInput : MonoBehaviour
             return;
         }
 
-        if (animator.GetBool("CanMove") == false)
+        if (mCanMove == false)
         {
             moveController.StopMove();
             return;
@@ -71,5 +87,4 @@ public class PlayerInput : MonoBehaviour
         Debug.Log($"AttackAnimEnd, Time : {Time.realtimeSinceStartup}");
         //mbIsAttacking = false;
     }
-
 }
