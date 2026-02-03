@@ -818,7 +818,7 @@ GameObject:
   - component: {fileID: 1132053363545892653}
   m_Layer: 7
   m_Name: Golem
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -905,7 +905,7 @@ MonoBehaviour:
   moveController: {fileID: 0}
   animator: {fileID: 2315607773727014940}
   IsInvulnerable: 0
-  mHP: 0
+  HP: 0
 --- !u!114 &5352509515349375547
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,10 +6,10 @@ public class BattleManager : MonoBehaviour
 {
     [SerializeField] private CharacterHealth player;
     [SerializeField] private List<CharacterHealth> monsters = new();
+    [SerializeField] private ResultUIController resultUI;
 
     private int mAliveMonsters;
     public bool Finished { get; private set; }
-    public bool IsWin { get; private set; }
 
     private void Awake()
     {
@@ -26,7 +26,6 @@ public class BattleManager : MonoBehaviour
     private void OnEnable()
     {
         Finished = false;
-        IsWin = false;
         mAliveMonsters = 0;
 
         if (player != null)
@@ -38,7 +37,9 @@ public class BattleManager : MonoBehaviour
     private void OnDisable()
     {
         if (player != null)
+        {
             player.OnDied -= OnPlayerDead;
+        }
 
         foreach (CharacterHealth m in monsters)
         {
@@ -73,22 +74,35 @@ public class BattleManager : MonoBehaviour
 
     private void OnPlayerDead()
     {
-        if (Finished) return;
+        if (Finished)
+        {
+            return;
+        }
+
         Finished = true;
-        IsWin = false;
         Debug.Log("ÆÐ¹è");
+        if (resultUI != null)
+        {
+            resultUI.Show(false);
+        }
     }
 
     private void OnMonsterDead()
     {
-        if (Finished) return;
+        if (Finished)
+        {
+            return;
+        }
 
         mAliveMonsters--;
         if (mAliveMonsters <= 0)
         {
             Finished = true;
-            IsWin = true;
             Debug.Log("½Â¸®");
+            if (resultUI != null)
+            {
+                resultUI.Show(true);
+            }
         }
     }
 }
