@@ -66,8 +66,12 @@ public class MonsterAttack : MonoBehaviour
         }
 
         nav.isStopped = true;
-
         string selectedAttack = SelectAttackId();
+
+        nav.updateRotation = false;
+        Vector3 dirToPlayer = player.position - transform.position;
+        transform.rotation = Quaternion.LookRotation(dirToPlayer);
+        nav.updateRotation = true;
 
         if (TryExecuteAttack(selectedAttack))
         {
