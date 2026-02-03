@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 5326746945504232170}
   m_Layer: 7
   m_Name: MK1
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,7 +112,7 @@ MonoBehaviour:
   moveController: {fileID: 0}
   animator: {fileID: 8158169398558144303}
   IsInvulnerable: 0
-  mHP: 0
+  HP: 0
 --- !u!136 &5557642254581988372
 CapsuleCollider:
   m_ObjectHideFlags: 0
