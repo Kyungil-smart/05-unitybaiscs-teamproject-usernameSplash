@@ -15,6 +15,7 @@ public class CharacterHealth : MonoBehaviour, IDamageable
     public bool IsStunned => Time.time < mStunTime;
 
     public event Action OnDied;
+    public event Action<float> OnHpChanged;
     private bool mDeadCalled;
 
     private void Reset()
@@ -38,6 +39,8 @@ public class CharacterHealth : MonoBehaviour, IDamageable
         {
             animator = GetComponentInChildren<Animator>();
         }
+
+        RefreshHealthUI();
     }
 
     public void TakeHit(in SHitInfo hit)
@@ -49,6 +52,7 @@ public class CharacterHealth : MonoBehaviour, IDamageable
 
         HP -= hit.Damage;
         mStunTime = Mathf.Max(mStunTime, Time.time + hit.StunSec);
+        RefreshHealthUI();
 
         Debug.Log($"{gameObject.name} take hit by {hit.Attacker.name}, Time : {Time.realtimeSinceStartup}");
 
@@ -77,5 +81,11 @@ public class CharacterHealth : MonoBehaviour, IDamageable
         {
             animator.SetTrigger("Hit");
         }
+    }
+
+    private void RefreshHealthUI()
+    {
+        float ratio = HP / MaxHP;
+        OnHpChanged?.Invoke(ratio);
     }
 }
